@@ -1,11 +1,11 @@
-const games = require('./games')
+const evaluations = require('./evaluations')
 const users = require('./users')
 const sessions = require('./sessions')
-const gamePlayers = require('./games/players')
+const evaluationPlayers = require('./evaluations/players')
 
 module.exports = {
-  games,
+  evaluations,
   users,
   sessions,
-  gamePlayers,
+  evaluationPlayers,
 }

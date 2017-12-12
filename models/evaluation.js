@@ -1,4 +1,4 @@
-// models/game.js
+// models/evaluation.js
 const mongoose = require('../config/database')
 const { Schema } = mongoose
 
@@ -13,7 +13,7 @@ const playerSchema = new Schema({
   pairs: [String],
 });
 
-const gameSchema = new Schema({
+const evaluationSchema = new Schema({
   cards: [cardSchema],
   players: [playerSchema],
   turn: { type: Number, default: 0 }, // player index
@@ -26,4 +26,4 @@ const gameSchema = new Schema({
   draw: { type: Boolean, default: false },
 });
 
-module.exports = mongoose.model('games', gameSchema)
+module.exports = mongoose.model('evaluations', evaluationSchema)

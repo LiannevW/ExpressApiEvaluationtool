@@ -1,34 +1,34 @@
-// routes/games.js
+// routes/evaluations.js
 const router = require('express').Router()
 const passport = require('../config/auth')
-const { Game } = require('../models')
+const { Evaluation } = require('../models')
 const utils = require('../lib/utils')
 
 const authenticate = passport.authorize('jwt', { session: false })
 
 module.exports = io => {
   router
-    .get('/games', (req, res, next) => {
-      Game.find()
-        // Newest games first
+    .get('/evaluations', (req, res, next) => {
+      Evaluation.find()
+        // Newest evaluations first
         .sort({ createdAt: -1 })
         // Send the data in JSON format
-        .then((games) => res.json(games))
+        .then((evaluations) => res.json(evaluations))
         // Throw a 500 error if something goes wrong
         .catch((error) => next(error))
     })
-    .get('/games/:id', (req, res, next) => {
+    .get('/evaluations/:id', (req, res, next) => {
       const id = req.params.id
 
-      Game.findById(id)
-        .then((game) => {
-          if (!game) { return next() }
-          res.json(game)
+      Evaluation.findById(id)
+        .then((evaluation) => {
+          if (!evaluation) { return next() }
+          res.json(evaluation)
         })
         .catch((error) => next(error))
     })
-    .post('/games', authenticate, (req, res, next) => {
-      const newGame = {
+    .post('/evaluations', authenticate, (req, res, next) => {
+      const newEvaluation = {
         userId: req.account._id,
         players: [{
           userId: req.account._id,
@@ -38,55 +38,55 @@ module.exports = io => {
           .map((symbol) => ({ visible: false, symbol }))
       }
 
-      Game.create(newGame)
-        .then((game) => {
+      Evaluation.create(newEvaluation)
+        .then((evaluation) => {
           io.emit('action', {
             type: 'GAME_CREATED',
-            payload: game
+            payload: evaluation
           })
-          res.json(game)
+          res.json(evaluation)
         })
         .catch((error) => next(error))
     })
-    .put('/games/:id', authenticate, (req, res, next) => {
+    .put('/evaluations/:id', authenticate, (req, res, next) => {
       const id = req.params.id
-      const updatedGame = req.body
+      const updatedEvaluation = req.body
 
-      Game.findByIdAndUpdate(id, { $set: updatedGame }, { new: true })
-        .then((game) => {
+      Evaluation.findByIdAndUpdate(id, { $set: updatedEvaluation }, { new: true })
+        .then((evaluation) => {
           io.emit('action', {
             type: 'GAME_UPDATED',
-            payload: game
+            payload: evaluation
           })
-          res.json(game)
+          res.json(evaluation)
         })
         .catch((error) => next(error))
     })
-    .patch('/games/:id', authenticate, (req, res, next) => {
+    .patch('/evaluations/:id', authenticate, (req, res, next) => {
       const id = req.params.id
-      const patchForGame = req.body
+      const patchForEvaluation = req.body
 
-      Game.findById(id)
-        .then((game) => {
-          if (!game) { return next() }
+      Evaluation.findById(id)
+        .then((evaluation) => {
+          if (!evaluation) { return next() }
 
-          const updatedGame = { ...game, ...patchForGame }
+          const updatedEvaluation = { ...evaluation, ...patchForEvaluation }
 
-          Game.findByIdAndUpdate(id, { $set: updatedGame }, { new: true })
-            .then((game) => {
+          Evaluation.findByIdAndUpdate(id, { $set: updatedEvaluation }, { new: true })
+            .then((evaluation) => {
               io.emit('action', {
                 type: 'GAME_UPDATED',
-                payload: game
+                payload: evaluation
               })
-              res.json(game)
+              res.json(evaluation)
             })
             .catch((error) => next(error))
         })
         .catch((error) => next(error))
     })
-    .delete('/games/:id', authenticate, (req, res, next) => {
+    .delete('/evaluations/:id', authenticate, (req, res, next) => {
       const id = req.params.id
-      Game.findByIdAndRemove(id)
+      Evaluation.findByIdAndRemove(id)
         .then(() => {
           io.emit('action', {
             type: 'GAME_REMOVED',
