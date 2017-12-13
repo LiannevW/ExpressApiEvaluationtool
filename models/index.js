@@ -1,8 +1,8 @@
 // models/index.js
-const Evaluation = require('./evaluation')
+const Batch = require('./batch')
 const User = require('./user')
 
 module.exports = {
-  Evaluation,
+  Batch,
   User
 }
