@@ -1,7 +1,7 @@
 {
-  "name": "memory-evaluation-api",
+  "name": "evaluation-api",
   "version": "1.0.0",
-  "description": "API for memory evaluations",
+  "description": "API for evaluations",
   "main": "index.js",
   "license": "MIT",
   "engines": {
