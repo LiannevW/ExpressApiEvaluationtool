@@ -5,5 +5,5 @@ const sessions = require('./sessions')
 module.exports = {
   batches,
   users,
-  sessions,
+  sessions
 }
