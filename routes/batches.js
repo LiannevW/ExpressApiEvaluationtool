@@ -2,6 +2,7 @@ const router = require('express').Router()
 const { Batch } = require('../models')
 
 router.get('/batches', (req, res, next) => {
+  console.log("post ontvangen in Express")
   Batch.find()
     .sort({ createdAt: -1 })
     // Send the data in JSON format
