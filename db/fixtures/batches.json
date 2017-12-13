@@ -1,0 +1,34 @@
+[{
+  "number":12,
+  "students": [
+    {
+       "firstName": "Lara",
+       "picture": "http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg",
+       "evaluation": [
+         {
+           "colour": "G",
+           "remark":""
+         },
+         {
+           "colour": "Y",
+           "remark":""
+         }
+       ]
+     },
+     {
+       "firstName": "Robin",
+       "picture": "https://news.nationalgeographic.com/content/dam/news/2016/02/24/01highanimals.jpg",
+       "evaluation": [
+         {
+           "colour": "R",
+           "remark":""
+         },
+         {
+           "colour": "G",
+           "remark":""
+         }
+       ]
+     }
+   ]
+}
+]

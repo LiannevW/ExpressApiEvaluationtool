@@ -9,15 +9,15 @@ const evaluationSchema = new Schema({
 
 const studentSchema = new Schema({
   batch: { type: String},
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  Picture: { type: String },
-  Evaluation: [evaluationSchema],
+  firstName: { type: String, required: false },
+  lastName: { type: String, required: false },
+  picture: { type: String },
+  evaluation: [evaluationSchema],
   lastEvaluation: { type: String},
 });
 
 const batchSchema = new Schema({
-  number: {type: Number, required: true },
+  number: {type: Number, required: false },
   startDate: {type: Date },
   endDate: {type: Date},
   students: [studentSchema],

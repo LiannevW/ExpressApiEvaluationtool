@@ -9,6 +9,7 @@ router.get('/batches', (req, res, next) => {
     // Throw a 500 error if something goes wrong
     .catch((error) => next(error))
   })
+
   .get('/batches/:id', (req, res, next) => {
     const id = req.params.id
     Batch.findById(id)
@@ -18,6 +19,7 @@ router.get('/batches', (req, res, next) => {
       })
       .catch((error) => next(error))
   })
+
   .post('/batches', (req, res, next) => {
     let newBatch = req.body
 
