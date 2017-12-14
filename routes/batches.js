@@ -13,13 +13,28 @@ router.get('/batches', (req, res, next) => {
 
   .get('/batches/:id', (req, res, next) => {
     const id = req.params.id
-    Batch.findById(id)
+    const tryBatches = {
+        evaluationPercentage: "10%"
+    }
+
+    Batch.findByIdAndUpdate(id, { $set: tryBatches }, { new: true })
       .then((batches) => {
         if (!batches) { return next() }
         res.json(batches)
       })
       .catch((error) => next(error))
   })
+
+  // .get('/batches/:id/:studentId', (req, res, next) => {
+  //   const id = req.params.id
+  //
+  //   Batch.findById(id)
+  //     .then((batches) => {
+  //       if (!batches) { return next() }
+  //       res.json(batches)
+  //     })
+  //     .catch((error) => next(error))
+  // })
 
   .post('/batches', (req, res, next) => {
     let newBatch = req.body

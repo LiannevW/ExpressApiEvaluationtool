@@ -21,7 +21,7 @@ const batchSchema = new Schema({
   startDate: {type: Date },
   endDate: {type: Date},
   students: [studentSchema],
-  evaluationPercentage: [String],
+  evaluationPercentage: { type: String},
   createdAt: { type: Date, default: Date.now },
   updatedAd: { type: Date, default: Date.now },
 });

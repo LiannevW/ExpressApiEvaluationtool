@@ -10,10 +10,12 @@
        "evaluation": [
          {
            "colour": "G",
+           "date": "2017-12-14",
            "remark":""
          },
          {
            "colour": "Y",
+           "date": "2017-12-13",
            "remark":""
          }
        ]
@@ -25,10 +27,12 @@
        "evaluation": [
          {
            "colour": "R",
+           "date": "2017-12-11",
            "remark":""
          },
          {
            "colour": "G",
+           "date": "2017-12-08",
            "remark":""
          }
        ]
@@ -37,7 +41,7 @@
 },
 {
   "number":11,
-  "startDate" : "2017-9-01",
+  "startDate" : "2017-09-01",
   "endDate" : "2018-11-01",
   "students": [
     {
@@ -47,10 +51,12 @@
        "evaluation": [
          {
            "colour": "Y",
+           "date": "2017-12-11",
            "remark":""
          },
          {
            "colour": "R",
+           "date": "2017-12-04",
            "remark":""
          }
        ]
@@ -62,10 +68,12 @@
        "evaluation": [
          {
            "colour": "G",
+           "date": "2017-12-13",
            "remark":""
          },
          {
            "colour": "G",
+           "date": "2017-12-10",
            "remark":""
          }
        ]
