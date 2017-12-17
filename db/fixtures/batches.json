@@ -10,12 +10,12 @@
        "evaluation": [
          {
            "colour": "G",
-           "date": "2017-12-14",
+           "date": "2017-12-13",
            "remark":""
          },
          {
-           "colour": "Y",
-           "date": "2017-12-13",
+           "colour": "G",
+           "date": "2017-12-14",
            "remark":""
          }
        ]
@@ -32,11 +32,79 @@
          },
          {
            "colour": "G",
-           "date": "2017-12-08",
+           "date": "2017-12-15",
            "remark":""
          }
        ]
-     }
+     },
+     {
+        "firstName": "Anna",
+        "lastName" : "R.",
+        "picture": "https://img.buzzfeed.com/buzzfeed-static/static/2017-08/22/13/enhanced/buzzfeed-prod-fastlane-03/enhanced-29317-1503422921-8.jpg?downsize=715",
+        "evaluation": [
+          {
+            "colour": "G",
+            "date": "2017-12-12",
+            "remark":""
+          },
+          {
+            "colour": "G",
+            "date": "2017-12-16",
+            "remark":""
+          }
+        ]
+      },
+      {
+         "firstName": "Lianne",
+         "lastName" : "van Westrhenen",
+         "picture": "http://www.lpzoo.org/sites/default/files/styles/slider/public/circle_redpanda.jpg?itok=Dy61Pr7G",
+         "evaluation": [
+           {
+             "colour": "G",
+             "date": "2017-12-15",
+             "remark":""
+           },
+           {
+             "colour": "R",
+             "date": "2017-12-18",
+             "remark":""
+           }
+         ]
+       },
+       {
+          "firstName": "Tea",
+          "lastName" : "Art",
+          "picture": "http://animals.sandiegozoo.org/sites/default/files/2016-08/category-thumbnail-mammals_0.jpg",
+          "evaluation": [
+            {
+              "colour": "G",
+              "date": "2017-12-15",
+              "remark":""
+            },
+            {
+              "colour": "Y",
+              "date": "2017-12-17",
+              "remark":""
+            }
+          ]
+        },
+        {
+           "firstName": "Rayta",
+           "lastName" : "Ruby",
+           "picture": "http://www.telegraph.co.uk/content/dam/news/2017/09/11/TELEMMGLPICT000035012721-xlarge_trans_NvBQzQNjv4BqRno0wBcbj8R7Bar7Q2cKrNST-j3MfP1ZOcJQAQJZGH8.jpeg",
+           "evaluation": [
+             {
+               "colour": "G",
+               "date": "2017-12-12",
+               "remark":""
+             },
+             {
+               "colour": "G",
+               "date": "2017-12-13",
+               "remark":""
+             }
+           ]
+         }
    ]
 },
 {

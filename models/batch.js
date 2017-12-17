@@ -13,7 +13,6 @@ const studentSchema = new Schema({
   lastName: { type: String, required: false },
   picture: { type: String },
   evaluation: [evaluationSchema],
-  lastEvaluation: { type: String},
 });
 
 const batchSchema = new Schema({
@@ -21,7 +20,6 @@ const batchSchema = new Schema({
   startDate: {type: Date },
   endDate: {type: Date},
   students: [studentSchema],
-  evaluationPercentage: { type: String},
   createdAt: { type: Date, default: Date.now },
   updatedAd: { type: Date, default: Date.now },
 });
