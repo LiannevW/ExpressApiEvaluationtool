@@ -1,6 +1,6 @@
 # Express Evaluations API
 
-RESTful Express API for Evaluations on top of MongoDB.
+RESTful Express API for Evaluations on top of MongoDB. The front-end of this app can be found [here](https://github.com/LiannevW/ReactEvaluationTool).
 
 ## Authentication
 
